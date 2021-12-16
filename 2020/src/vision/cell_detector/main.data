@@ -1,0 +1,5 @@
+classes= 1
+train = /root/pdf-crack/server/darknet/FOUT/train.txt
+valid = /root/pdf-crack/server/darknet/FOUT/valid.txt
+names = main.names
+backup = backup
