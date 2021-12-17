@@ -1,8 +1,0 @@
-#!/bin/sh
-#
-# Will auto format the source code using the google-java-formatter
-
-FILES=$(git diff --cached --name-only)
-java -jar util/formatter/google-java-format-1.5-all-deps.jar -i $FILES
-
-git add $FILES
