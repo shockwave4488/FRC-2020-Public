@@ -1,0 +1,14 @@
+name: Robot Code CD
+on:
+  push:
+    branches:
+      - master
+jobs:
+  release:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build robot code
+      run: docker build . -t frc4488-cmd:latest
+    - name: Cleanup
+      run: docker system prune -f

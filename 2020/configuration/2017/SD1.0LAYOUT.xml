@@ -1,0 +1,146 @@
+<xml version="1.0">
+<dashboard>
+	<widget field="Intake Has Gear?" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="205" y="132"/>
+		<width>208</width>
+		<height>109</height>
+	</widget>
+	<widget field="Target locked" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="88"/>
+	</widget>
+	<widget field="Done Aligning to Wall?" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="309" y="85"/>
+	</widget>
+	<widget field="At Optimized Shooter Range?" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="959" y="446"/>
+		<width>410</width>
+		<height>465</height>
+	</widget>
+	<widget field="isGear" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="648" y="448"/>
+		<width>274</width>
+		<height>467</height>
+	</widget>
+	<widget field="Done Aiming?" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="968" y="34"/>
+		<width>308</width>
+		<height>399</height>
+	</widget>
+	<widget field="Target Found?" type="Boolean" class="edu.wpi.first.smartdashboard.gui.elements.BooleanBox">
+		<location x="639" y="25"/>
+		<width>325</width>
+		<height>403</height>
+	</widget>
+	<widget field="Drive Gear" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="381" y="704"/>
+		<width>190</width>
+		<height>80</height>
+	</widget>
+	<widget field="Shooter Ticks" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="209"/>
+	</widget>
+	<widget field="Shooting Scalar" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="186"/>
+	</widget>
+	<widget field="Angle Setpoint" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="111"/>
+	</widget>
+	<widget field="Shooter Desired RPM" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="65"/>
+	</widget>
+	<widget field="Shooting Scaler" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="0"/>
+	</widget>
+	<widget field="BoilerRange" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="373" y="548"/>
+		<width>198</width>
+		<height>145</height>
+	</widget>
+	<widget field="BoilerDegToCenterOfTarget" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="-3" y="246"/>
+	</widget>
+	<widget field="Climber Motor Current" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="736"/>
+	</widget>
+	<widget field="Set Boiler Camera" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="681"/>
+	</widget>
+	<widget field="Set Conveyer RPM" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="618"/>
+	</widget>
+	<widget field="DriveR Pos" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="217" y="448"/>
+	</widget>
+	<widget field="DriveL Pos" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="215" y="403"/>
+		<height>22</height>
+	</widget>
+	<widget field="DriveL Speed" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="464"/>
+	</widget>
+	<widget field="LED Brightness %" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="-3" y="549"/>
+	</widget>
+	<widget field="Drive Pos" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="223" y="427"/>
+	</widget>
+	<widget field="Drive Speed" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="368"/>
+	</widget>
+	<widget field="Set Shooter RPM" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="345"/>
+	</widget>
+	<widget field="DriveR Speed" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="163"/>
+	</widget>
+	<widget field="Conveyer RPM" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="140"/>
+	</widget>
+	<widget field="Drive Angle" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="42"/>
+	</widget>
+	<static-widget class="edu.wpi.first.smartdashboard.gui.elements.RobotPreferences">
+		<location x="1388" y="568"/>
+		<width>527</width>
+		<height>367</height>
+	</static-widget>
+	<widget field="Gear Manip State" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="0" y="714"/>
+	</widget>
+	<widget field="Autonomous" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
+		<location x="1542" y="637"/>
+	</widget>
+	<widget field="Auto choices" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
+		<location x="573" y="133"/>
+	</widget>
+	<widget field="Shooter RPM" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.LinePlot">
+		<location x="1337" y="7"/>
+		<width>560</width>
+		<height>477</height>
+	</widget>
+	<widget field="Side" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
+		<location x="397" y="326"/>
+	</widget>
+	<widget field="Auto Path" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
+		<location x="401" y="152"/>
+	</widget>
+	<widget field="Positions" type="String Chooser" class="edu.wpi.first.smartdashboard.gui.elements.Chooser">
+		<location x="399" y="406"/>
+	</widget>
+	<widget field="US Distance" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="354" y="46"/>
+	</widget>
+	<widget field="US Right Distance" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="321" y="16"/>
+		<height>30</height>
+	</widget>
+	<widget field="Intake State" type="String" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="30" y="807"/>
+	</widget>
+	<widget field="US Left Distance" type="Number" class="edu.wpi.first.smartdashboard.gui.elements.TextBox">
+		<location x="333" y="64"/>
+	</widget>
+</dashboard>
+<live-window>
+</live-window>
+</xml>

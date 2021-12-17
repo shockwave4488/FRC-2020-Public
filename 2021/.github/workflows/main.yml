@@ -1,0 +1,14 @@
+name: Robot Code CI
+on: 
+  push:
+    branches-ignore:
+      - master
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build robot code
+      run: docker build . -t frc4488-cmd:dev
+    - name: Cleanup
+      run: docker system prune -f

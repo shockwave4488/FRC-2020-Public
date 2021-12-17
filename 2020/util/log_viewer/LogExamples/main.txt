@@ -1,0 +1,4 @@
+0 Robot started
+1 Intake started
+2 Intake finished
+3 Robot ended
