@@ -27,7 +27,7 @@ public interface TankDrive {
     Timer s = new Timer();
     s.start();
 
-    while (!s.hasPeriodPassed(time)) {
+    while (!s.advanceIfElapsed(time)) {
       setPowers(lPower, rPower);
       accurateWaitSeconds(interval);
     }
@@ -65,7 +65,7 @@ public interface TankDrive {
     Timer s = new Timer();
     s.start();
 
-    while (!s.hasPeriodPassed(time)) {
+    while (!s.advanceIfElapsed(time)) {
       expression.drive(s.get());
       accurateWaitSeconds(interval);
     }

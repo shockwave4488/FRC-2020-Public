@@ -3,8 +3,8 @@ package org.usfirst.frc.team4488.robot.systems.drive;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import com.ctre.phoenix.sensors.SensorVelocityMeasPeriod;
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -64,7 +64,6 @@ public class Drive extends WestCoastDrive {
   private NavX rioNavx;
 
   private PathFollower mPathFollower;
-  private Path mCurrentPath = null;
   private WestCoastStateEstimator stateEstimator = new WestCoastStateEstimator(this);
 
   private Logging logger;
@@ -188,9 +187,9 @@ public class Drive extends WestCoastDrive {
       m_left.setSensorPhase(true);
     }
 
-    m_left.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
+    m_left.configVelocityMeasurementPeriod(SensorVelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
     m_left.configVelocityMeasurementWindow(64, 0);
-    m_right.configVelocityMeasurementPeriod(VelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
+    m_right.configVelocityMeasurementPeriod(SensorVelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
     m_right.configVelocityMeasurementWindow(64, 0);
 
     // Set the feedback encoder type for the close-loop velocity control

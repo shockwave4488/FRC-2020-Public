@@ -87,6 +87,9 @@ public class ClimbRoutine extends Routine {
 
       case Done:
         break;
+      case WaitingForBuddy:
+        logger.writeToLogFormatted(this, "Default empty case for WaitingForBuddy");
+        break;
     }
   }
 

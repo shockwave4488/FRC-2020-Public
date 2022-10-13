@@ -24,10 +24,10 @@ public class SubsystemManager {
 
   private HashSet<BindedRoutine> runningRoutines;
 
-  private boolean inRoutine = false;
+  // private boolean inRoutine = false;
   private final DriveBase drive;
 
-  private boolean firstRun = true;
+  // private boolean firstRun = true;
 
   private static SubsystemManager sInstance;
 

@@ -32,11 +32,11 @@ public class SmartPCM implements Subsystem {
       };
 
   public void startCompressor() {
-    compressor.start();
+    compressor.enableDigital();
   }
 
   public void stopCompressor() {
-    compressor.stop();
+    compressor.disable();
   }
 
   @Override

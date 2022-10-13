@@ -29,7 +29,7 @@ public class PathFinder {
 
   private static class GeneratedPath implements PathContainer {
     private ArrayList<Waypoint> points = new ArrayList<Waypoint>();
-    private boolean reversed = false;
+    // private boolean reversed = false;
     private Rotation2d heading;
     private final int speed = Constants.generatedPathSpeed;
 
@@ -72,18 +72,10 @@ public class PathFinder {
           heading);
     }
 
-    public void setReversed(boolean reversed) {
-      this.reversed = reversed;
-    }
-
     public void addPoint(int x, int y) {
       // Y is inverted because PathFinder uses top left corner as (0,0) but APP uses bottom left for
       // (0,0)
       points.add(new Waypoint(x, field.height - y, 0, speed));
-    }
-
-    public ArrayList<Waypoint> getPoints() {
-      return points;
     }
   }
 

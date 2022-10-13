@@ -88,7 +88,7 @@ public interface GyroscopeDrive extends TankDrive {
     Timer t = new Timer();
     t.start();
 
-    while (!t.hasPeriodPassed(time)) {
+    while (!t.advanceIfElapsed(time)) {
       double correctingPower = correction.get(getGyroscope().getAngle());
       setPowers(power + correctingPower, power - correctingPower);
       accurateWaitSeconds(interval);

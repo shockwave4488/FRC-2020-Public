@@ -1,9 +1,9 @@
 package org.usfirst.frc.team4488.robot.systems.drive;
 
-import com.revrobotics.CANPIDController;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-import com.revrobotics.ControlType;
+import com.revrobotics.SparkMaxPIDController;
+
 import org.usfirst.frc.team4488.lib.PreferenceDoesNotExistException;
 import org.usfirst.frc.team4488.lib.PreferencesParser;
 import org.usfirst.frc.team4488.lib.app.math.Translation2d;
@@ -16,7 +16,7 @@ public class SwerveModule implements Loop {
 
   private CANSparkMax angleSpark;
   private CANSparkMax speedSpark;
-  private CANPIDController speedController;
+  private SparkMaxPIDController speedController;
   private SimPID angleController;
 
   private Potentiometer anglePot;
@@ -60,13 +60,13 @@ public class SwerveModule implements Loop {
       case Voltage:
         double targetVoltage = targetVector.norm();
         targetVoltage *= reversed ? -1 : 1;
-        speedController.setReference(targetVoltage, ControlType.kDutyCycle);
+        speedController.setReference(targetVoltage, CANSparkMax.ControlType.kDutyCycle);
         break;
       case Velocity:
         double targetVelocity = targetVector.norm();
         targetVelocity *= reversed ? -1 : 1;
         targetVelocity = (targetVelocity * 60) / (Math.PI * wheelDiameter); // ips to rpm
-        speedController.setReference(targetVelocity, ControlType.kVelocity);
+        speedController.setReference(targetVelocity, CANSparkMax.ControlType.kVelocity);
         break;
     }
 
@@ -87,7 +87,7 @@ public class SwerveModule implements Loop {
   public SwerveModule(SwerveParameters parameters) {
     speedSpark = new CANSparkMax(parameters.throttleControllerID, MotorType.kBrushless);
     angleSpark = new CANSparkMax(parameters.angleControllerID, MotorType.kBrushless);
-    speedController = new CANPIDController(speedSpark);
+    speedController = speedSpark.getPIDController();
     angleController = new SimPID();
     anglePot = new Potentiometer(parameters.anglePotID);
     speedSpark.setClosedLoopRampRate(0.5);

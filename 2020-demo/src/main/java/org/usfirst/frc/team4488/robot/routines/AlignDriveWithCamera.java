@@ -27,16 +27,16 @@ public class AlignDriveWithCamera extends Routine {
   private LimelightManager limelightManager = LimelightManager.getInstance();
   private Limelight limelight = limelightManager.getFrontLimelight();
 
-  private static final double ZOOM_DISTANCE_THRESHOLD = 240;
-  private static final double ZOOM_ANGLE_THRESHOLD = 13;
+  // private static final double ZOOM_DISTANCE_THRESHOLD = 240;
+  // private static final double ZOOM_ANGLE_THRESHOLD = 13;
   private static final double OUTER_TO_INNER = 28;
   private static final double PARALLAX_ANGLE_CUTOFF = 24;
   private static final double SLOPPY_DONE_RANGE = 0.6;
   private static final double PARALLAX_DONE_RANGE = 0.3;
   private static final double DRIVE_CRAWL = -0.055;
-  private static final int CAM_DONE_CYCLES = 25;
+  // private static final int CAM_DONE_CYCLES = 25;
   private static final int DISTANCE_UPDATE_THRESHOLD = 20;
-  private static final boolean ZOOM_ENABLED = false;
+  // private static final boolean ZOOM_ENABLED = false;
   private static final int MEDIAN_FILTER_SAMPLES = 10;
   private static final int CHECK_AGAIN_THRESH = 5;
   private static final double ANGLE_OFFSET = -0.83;
@@ -204,13 +204,13 @@ public class AlignDriveWithCamera extends Routine {
     return toAdjust;
   }
 
-  private void handleZoom() {
-    if (ZOOM_ENABLED) {
-      boolean shouldZoom =
-          limelight.hasTarget()
-              && limelight.getEstimatedDistance() > ZOOM_DISTANCE_THRESHOLD
-              && Math.abs(limelight.getX()) < ZOOM_ANGLE_THRESHOLD;
-      limelight.setPipeline(shouldZoom ? 1 : 0);
-    }
-  }
+  // private void handleZoom() {
+  //   if (ZOOM_ENABLED) {
+  //     boolean shouldZoom =
+  //         limelight.hasTarget()
+  //             && limelight.getEstimatedDistance() > ZOOM_DISTANCE_THRESHOLD
+  //             && Math.abs(limelight.getX()) < ZOOM_ANGLE_THRESHOLD;
+  //     limelight.setPipeline(shouldZoom ? 1 : 0);
+  //   }
+  // }
 }

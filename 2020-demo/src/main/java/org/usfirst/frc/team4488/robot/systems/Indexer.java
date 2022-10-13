@@ -51,7 +51,7 @@ public class Indexer implements Subsystem {
   private static final int REALLY_LOW_NUMBER = -99999;
   private int ballPassedLowerTicks = 0;
   private int ballPassedUpperTicks = 0;
-  private int ballPassedTransitionTicks = 0;
+  // private int ballPassedTransitionTicks = 0;
 
   private static Indexer sInstance;
 
@@ -107,7 +107,7 @@ public class Indexer implements Subsystem {
           }
 
           if (transitionBeamBreakChanged.getFallingUpdate(secondBeamBroken())) {
-            ballPassedTransitionTicks = getShooterConveyorTicks();
+            // ballPassedTransitionTicks = getShooterConveyorTicks();
           }
 
           if (upperBeamBreakChanged.getFallingUpdate(fourthBeamBroken())) {

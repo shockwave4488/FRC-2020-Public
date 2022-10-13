@@ -25,9 +25,9 @@ import org.usfirst.frc.team4488.robot.systems.drive.WestCoastDrive;
 
 public class StealDiffTrenchAndShootMode extends AutoModeBase {
 
-  private static final double INTAKE_TIME = 5.0;
-  private static final int APPROXIMATE_ANGLE_TO_TARGET = 350;
-  private static final double FAKE_SHOOT_TIME = 5;
+  // private static final double INTAKE_TIME = 5.0;
+  // private static final int APPROXIMATE_ANGLE_TO_TARGET = 350;
+  // private static final double FAKE_SHOOT_TIME = 5;
   private static final double PRESPIN_RPMS = 4400;
 
   private DriveBase drive = SubsystemManager.getInstance().getDrive();
