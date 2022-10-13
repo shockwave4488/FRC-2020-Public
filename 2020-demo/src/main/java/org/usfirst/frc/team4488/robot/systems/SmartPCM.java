@@ -1,15 +1,16 @@
 package org.usfirst.frc.team4488.robot.systems;
 
 import edu.wpi.first.wpilibj.Compressor;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
+
 import org.usfirst.frc.team4488.lib.loops.Loop;
 import org.usfirst.frc.team4488.lib.loops.Looper;
-import org.usfirst.frc.team4488.robot.RobotMap;
 
 public class SmartPCM implements Subsystem {
 
   public static SmartPCM instance;
 
-  private Compressor compressor = new Compressor(RobotMap.PCM);
+  private Compressor compressor = new Compressor(PneumaticsModuleType.CTREPCM);
 
   public static SmartPCM getInstance() {
     if (instance == null) instance = new SmartPCM();
@@ -32,11 +33,11 @@ public class SmartPCM implements Subsystem {
       };
 
   public void startCompressor() {
-    compressor.start();
+    compressor.enableDigital();
   }
 
   public void stopCompressor() {
-    compressor.stop();
+    compressor.disable();
   }
 
   @Override

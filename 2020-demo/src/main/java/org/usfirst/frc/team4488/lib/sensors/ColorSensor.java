@@ -24,10 +24,10 @@ public class ColorSensor {
 
   private ColorType returnColor;
 
-  final Color kBlueTarget = ColorMatch.makeColor(0.15, 0.43, 0.40);
-  final Color kGreenTarget = ColorMatch.makeColor(0.20, 0.54, 0.25);
-  final Color kRedTarget = ColorMatch.makeColor(0.45, 0.37, 0.17);
-  final Color kYellowTarget = ColorMatch.makeColor(0.33, 0.53, 0.13);
+  final Color kBlueTarget = new Color(0.15, 0.43, 0.40);
+  final Color kGreenTarget = new Color(0.20, 0.54, 0.25);
+  final Color kRedTarget = new Color(0.45, 0.37, 0.17);
+  final Color kYellowTarget = new Color(0.33, 0.53, 0.13);
 
   ColorSensor() {
     m_colorMatcher.addColorMatch(kBlueTarget);

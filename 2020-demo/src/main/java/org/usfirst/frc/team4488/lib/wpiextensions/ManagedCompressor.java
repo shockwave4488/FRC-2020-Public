@@ -2,6 +2,7 @@ package org.usfirst.frc.team4488.lib.wpiextensions;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.Notifier;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.RobotController;
 
 /** A Compressor which will not run if the voltage is too low. */
@@ -55,6 +56,7 @@ public class ManagedCompressor extends Compressor {
    * @param Period time to wait between on and off values.
    */
   public ManagedCompressor(double voltageThreshold, double period) {
+    super(PneumaticsModuleType.CTREPCM);
     m_period = period;
     setVoltageThreshold(voltageThreshold);
     Runnable runUpdate =

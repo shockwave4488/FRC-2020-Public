@@ -6,6 +6,8 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.VelocityMeasPeriod;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.kauailabs.navx.frc.AHRS;
+
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import java.util.Optional;
@@ -200,7 +202,7 @@ public class Drive extends WestCoastDrive {
     reloadGains(); // update PID constants in talons
 
     if (RobotMap.hasShifters) {
-      shifter = Optional.of(new Solenoid(RobotMap.PCM, RobotMap.DriveGearShiftSolenoid));
+      shifter = Optional.of(new Solenoid(PneumaticsModuleType.CTREPCM, RobotMap.DriveGearShiftSolenoid));
     } else {
       shifter = Optional.empty();
     }

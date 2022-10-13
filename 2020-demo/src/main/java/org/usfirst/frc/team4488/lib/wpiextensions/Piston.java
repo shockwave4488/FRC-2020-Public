@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4488.lib.wpiextensions;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.PneumaticsModuleType;
 
 /** A subclass of DoubleSolenoid meant to more intuitively model a piston */
 public class Piston extends DoubleSolenoid {
@@ -36,7 +37,7 @@ public class Piston extends DoubleSolenoid {
    * @param reverseChannel
    */
   public Piston(int forwardChannel, int reverseChannel) {
-    super(forwardChannel, reverseChannel);
+    super(PneumaticsModuleType.CTREPCM, forwardChannel, reverseChannel);
     setInverted(false);
     setExtended(false);
   }
@@ -49,7 +50,7 @@ public class Piston extends DoubleSolenoid {
    * @param reverseChannel
    */
   public Piston(int moduleNumber, int forwardChannel, int reverseChannel) {
-    super(moduleNumber, forwardChannel, reverseChannel);
+    super(moduleNumber, PneumaticsModuleType.CTREPCM, forwardChannel, reverseChannel);
     setInverted(false);
     setExtended(false);
   }

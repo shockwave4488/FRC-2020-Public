@@ -87,7 +87,7 @@ public class SwerveModule implements Loop {
   public SwerveModule(SwerveParameters parameters) {
     speedSpark = new CANSparkMax(parameters.throttleControllerID, MotorType.kBrushless);
     angleSpark = new CANSparkMax(parameters.angleControllerID, MotorType.kBrushless);
-    speedController = new CANPIDController(speedSpark);
+    speedController = speedSpark.getPIDController();
     angleController = new SimPID();
     anglePot = new Potentiometer(parameters.anglePotID);
     speedSpark.setClosedLoopRampRate(0.5);

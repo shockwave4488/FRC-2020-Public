@@ -3,7 +3,7 @@ package org.usfirst.frc.team4488.robot.systems;
 import edu.wpi.first.wpilibj.PowerDistribution;
 import org.usfirst.frc.team4488.robot.RobotMap;
 
-public class SmartPDP extends PowerDistributionPanel {
+public class SmartPDP extends PowerDistribution {
 
   public static SmartPDP sInstance = null;
   /** @return an instance of smart PDP */
@@ -16,6 +16,6 @@ public class SmartPDP extends PowerDistributionPanel {
   }
 
   public SmartPDP(int id) {
-    super(id);
+    super(id, ModuleType.kCTRE);
   }
 }
