@@ -11,7 +11,7 @@ public class Tuner {
   private double period;
   private AtomicBoolean shouldRun = new AtomicBoolean(false);
   private Thread updateThread;
-  private TunerCallback callback;
+  // private TunerCallback callback;
   private Map<String, Double> vals = new HashMap<String, Double>();
 
   /**
@@ -22,7 +22,7 @@ public class Tuner {
    * @param frequency how many times to check SmartDashboard each second
    */
   public Tuner(TunerCallback callback, int frequency) {
-    this.callback = callback;
+    // this.callback = callback;
 
     period = 1 / (double) frequency;
 

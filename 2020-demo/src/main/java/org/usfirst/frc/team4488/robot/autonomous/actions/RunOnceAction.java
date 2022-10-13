@@ -8,7 +8,7 @@ import org.usfirst.frc.team4488.robot.routines.Routine;
  *
  * @see Action
  */
-public abstract class RunOnceAction extends Routine implements Action {
+public abstract class RunOnceAction extends Routine {
   Logging logger = Logging.getInstance();
 
   @Override

@@ -45,13 +45,10 @@ public class Climber implements Subsystem {
   // private final HallEffect flagTouchingBar;
 
   private static final double TICKS_PER_INCH = 12500;
-  private static final double FORKS_OUT_POWER = 0.5;
-  private static final double FORKS_IN_POWER = -0.1;
   private static final double HOOKS_OUT_POWER = 0.1;
   private static final double HOOKS_IN_POWER = -0.5;
   private static final double HOOKS_MAINTAIN_POWER = -0.1;
   private static final DoubleSolenoid.Value HOOKS_LOCKED = DoubleSolenoid.Value.kForward;
-  private static final DoubleSolenoid.Value HOOKS_UNLOCKED = DoubleSolenoid.Value.kReverse;
 
   private boolean desiredForksOut = false;
   private boolean doneClimbing = false;

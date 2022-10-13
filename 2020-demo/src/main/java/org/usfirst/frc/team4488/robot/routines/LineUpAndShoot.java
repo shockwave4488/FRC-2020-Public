@@ -1,6 +1,5 @@
 package org.usfirst.frc.team4488.robot.routines;
 
-import org.usfirst.frc.team4488.lib.flowcontrol.EdgeTrigger;
 import org.usfirst.frc.team4488.robot.systems.Indexer;
 import org.usfirst.frc.team4488.robot.systems.Intake;
 import org.usfirst.frc.team4488.robot.systems.Shooter;
@@ -20,8 +19,8 @@ public class LineUpAndShoot extends SeriesRoutine {
   private final AlignDriveWithCamera alignRoutine;
   private final ShootingRoutine shootRoutine;
 
-  private EdgeTrigger startingShootingRoutine = new EdgeTrigger(false);
-  private boolean startedShooter = false;
+  // private EdgeTrigger startingShootingRoutine = new EdgeTrigger(false);
+  // private boolean startedShooter = false;
 
   public LineUpAndShoot(boolean parallaxAdj, boolean precise) {
     requireSystems(intake, indexer, shooter, drive);

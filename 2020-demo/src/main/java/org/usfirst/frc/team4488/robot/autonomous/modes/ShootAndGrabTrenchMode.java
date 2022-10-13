@@ -23,8 +23,8 @@ import org.usfirst.frc.team4488.robot.systems.drive.WestCoastDrive;
 
 public class ShootAndGrabTrenchMode extends AutoModeBase {
 
-  private static final double INTAKE_TIME = 5.0;
-  private static final double FAKE_SHOOT_TIME = 5;
+  // private static final double INTAKE_TIME = 5.0;
+  // private static final double FAKE_SHOOT_TIME = 5;
   private static final double FIRST_PRESPIN_RPMS = 4350;
   private static final double SECOND_PRESPIN_RPMS = 4400;
 

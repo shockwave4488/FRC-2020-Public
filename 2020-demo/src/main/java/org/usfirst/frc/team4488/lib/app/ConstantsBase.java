@@ -194,6 +194,7 @@ public abstract class ConstantsBase {
     }
   }
 
+  @SuppressWarnings("unchecked")
   public void saveToFile() {
     File file = getFile();
     if (file == null) {

@@ -8,14 +8,14 @@ import edu.wpi.first.wpilibj.RobotController;
 /** A Compressor which will not run if the voltage is too low. */
 public class ManagedCompressor extends Compressor {
   private Notifier m_periodic;
-  private boolean m_usingTimer;
+  // private boolean m_usingTimer;
   private final double m_period;
   private double m_voltageThreshold;
   private double m_voltageDeadband;
 
   /** If the {@link #ManagedCompressor} is being updated automatically and periodically */
   public void useTimer(boolean value) {
-    m_usingTimer = value;
+    // m_usingTimer = value;
     if (value) m_periodic.startPeriodic(m_period);
     else m_periodic.stop();
   }
@@ -76,9 +76,9 @@ public class ManagedCompressor extends Compressor {
    */
   public void update() {
     if (RobotController.getInputVoltage() < getVoltageThreshold() - getVoltageDeadband()) {
-      stop();
+      disable();
     } else if (RobotController.getInputVoltage() > getVoltageThreshold() + getVoltageDeadband()) {
-      start();
+      enableDigital();
     }
   }
 }

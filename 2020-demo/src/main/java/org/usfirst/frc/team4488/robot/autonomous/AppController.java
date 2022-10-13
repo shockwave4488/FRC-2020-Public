@@ -14,7 +14,7 @@ public class AppController {
   private PathFollower pathFollower;
   private WestCoastDrive drive;
   private RobotStateEstimatorBase stateEstimator;
-  private Path currentPath;
+  // private Path currentPath;
   private boolean runningPath;
 
   public AppController(WestCoastDrive drive) {
@@ -34,7 +34,7 @@ public class AppController {
 
     pathFollower = new PathFollower(path, reversed, params);
 
-    currentPath = path;
+    // currentPath = path;
     runningPath = true;
   }
 

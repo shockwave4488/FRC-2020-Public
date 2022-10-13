@@ -1,6 +1,6 @@
 package org.usfirst.frc.team4488.robot.autonomous.actions;
 
-public class PrintToConsoleAction extends RunOnceAction implements Action {
+public class PrintToConsoleAction extends RunOnceAction {
   String debugMessage;
 
   public PrintToConsoleAction(String s) {

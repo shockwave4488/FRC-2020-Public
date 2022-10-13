@@ -20,7 +20,7 @@ public class Looper {
   private final List<Loop> loops_;
   private final Object taskRunningLock_ = new Object();
   private double timestamp_ = 0;
-  private double dt_ = 0;
+  // private double dt_ = 0;
 
   private final CrashTrackingRunnable runnable_ =
       new CrashTrackingRunnable() {
@@ -34,7 +34,7 @@ public class Looper {
                 loop.onLoop(now);
               }
 
-              dt_ = now - timestamp_;
+              // dt_ = now - timestamp_;
               timestamp_ = now;
             }
           }

@@ -30,7 +30,7 @@ public class SimPID {
   private double iZone;
   private int minCycleCount;
   private int cycleCount;
-  private boolean vomit;
+  // private boolean vomit;
 
   public SimPID() {
     this(0.0, 0.0, 0.0, 0.0);
@@ -50,7 +50,7 @@ public class SimPID {
 
     this.cycleCount = 0;
     this.minCycleCount = 5;
-    this.vomit = false;
+    // this.vomit = false;
 
     wrapAround = false;
     overrideI = false;
@@ -87,7 +87,7 @@ public class SimPID {
   }
 
   public void setVomitTrue() {
-    this.vomit = true;
+    // this.vomit = true;
   }
 
   public void setDoneRange(double range) {
