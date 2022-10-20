@@ -3,7 +3,6 @@ package org.usfirst.frc.team4488.robot.systems.drive;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonFX;
-
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -87,7 +86,8 @@ public class FalconDrive extends WestCoastDrive {
     rightFollower = new TalonFX(RobotMap.FalconDriveRightF);
 
     if (RobotMap.hasShifters) {
-      shifter = Optional.of(new Solenoid(PneumaticsModuleType.CTREPCM, RobotMap.DriveGearShiftSolenoid));
+      shifter =
+          Optional.of(new Solenoid(PneumaticsModuleType.CTREPCM, RobotMap.DriveGearShiftSolenoid));
     } else {
       shifter = Optional.empty();
     }

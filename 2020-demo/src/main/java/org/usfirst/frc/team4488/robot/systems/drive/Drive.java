@@ -6,7 +6,6 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.sensors.SensorVelocityMeasPeriod;
 import com.kauailabs.navx.frc.AHRS;
-
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -188,9 +187,11 @@ public class Drive extends WestCoastDrive {
       m_left.setSensorPhase(true);
     }
 
-    m_left.configVelocityMeasurementPeriod(SensorVelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
+    m_left.configVelocityMeasurementPeriod(
+        SensorVelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
     m_left.configVelocityMeasurementWindow(64, 0);
-    m_right.configVelocityMeasurementPeriod(SensorVelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
+    m_right.configVelocityMeasurementPeriod(
+        SensorVelocityMeasPeriod.Period_100Ms, 0); // 254 uses 10 MS
     m_right.configVelocityMeasurementWindow(64, 0);
 
     // Set the feedback encoder type for the close-loop velocity control
@@ -200,7 +201,8 @@ public class Drive extends WestCoastDrive {
     reloadGains(); // update PID constants in talons
 
     if (RobotMap.hasShifters) {
-      shifter = Optional.of(new Solenoid(PneumaticsModuleType.CTREPCM, RobotMap.DriveGearShiftSolenoid));
+      shifter =
+          Optional.of(new Solenoid(PneumaticsModuleType.CTREPCM, RobotMap.DriveGearShiftSolenoid));
     } else {
       shifter = Optional.empty();
     }

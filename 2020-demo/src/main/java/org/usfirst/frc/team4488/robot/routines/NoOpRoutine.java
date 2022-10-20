@@ -22,5 +22,6 @@ public class NoOpRoutine extends DefaultRoutine {
 
   public void update() {}
 
-  public void abort() {};
+  public void abort() {}
+  ;
 }

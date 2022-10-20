@@ -2,7 +2,6 @@ package org.usfirst.frc.team4488.robot.systems;
 
 import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.PneumaticsModuleType;
-
 import org.usfirst.frc.team4488.lib.loops.Loop;
 import org.usfirst.frc.team4488.lib.loops.Looper;
 
