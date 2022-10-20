@@ -323,10 +323,12 @@ public class SwerveDrive extends DriveBase {
     for (SwerveModule module : modules) {
       module.updatePrefs();
     }
-  };
+  }
+  ;
 
   @Override
-  public void writeToLog() {};
+  public void writeToLog() {}
+  ;
 
   @Override
   public RobotStateEstimatorBase getStateEstimator() {

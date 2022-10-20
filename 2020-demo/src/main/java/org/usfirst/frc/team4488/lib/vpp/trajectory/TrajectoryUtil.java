@@ -151,5 +151,6 @@ public class TrajectoryUtil {
   public static Trajectory<Pose2dWithCurvature> trajectoryFromSplines(
       final List<? extends Spline> splines, double maxDx, double maxDy, double maxDTheta) {
     return new Trajectory<>(SplineGenerator.parameterizeSplines(splines, maxDx, maxDy, maxDTheta));
-  };
+  }
+  ;
 }

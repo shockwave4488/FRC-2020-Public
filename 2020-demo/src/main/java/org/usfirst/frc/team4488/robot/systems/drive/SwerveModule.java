@@ -3,7 +3,6 @@ package org.usfirst.frc.team4488.robot.systems.drive;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import com.revrobotics.SparkMaxPIDController;
-
 import org.usfirst.frc.team4488.lib.PreferenceDoesNotExistException;
 import org.usfirst.frc.team4488.lib.PreferencesParser;
 import org.usfirst.frc.team4488.lib.app.math.Translation2d;

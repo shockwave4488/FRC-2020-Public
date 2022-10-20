@@ -14,6 +14,7 @@ public class LimelightManager implements Subsystem {
   private static LimelightManager instance = null;
 
   public static synchronized LimelightManager getInstance() {
+    if (true) throw new RuntimeException("Limelight accessed");
     if (instance == null) instance = new LimelightManager();
     return instance;
   }

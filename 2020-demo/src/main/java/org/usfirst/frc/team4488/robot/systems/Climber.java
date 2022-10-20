@@ -17,6 +17,7 @@ public class Climber implements Subsystem {
   private static Climber instance = null;
 
   public static synchronized Climber getInstance() {
+    if (true) throw new RuntimeException("Climber accessed");
     if (instance == null) instance = new Climber();
     return instance;
   }

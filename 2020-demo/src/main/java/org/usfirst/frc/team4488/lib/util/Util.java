@@ -53,7 +53,8 @@ public class Util {
       Thread.sleep(milliSeconds - 12);
     }
 
-    while (sw.get() < time) ;
+    while (sw.get() < time)
+      ;
     sw.stop();
   }
 
