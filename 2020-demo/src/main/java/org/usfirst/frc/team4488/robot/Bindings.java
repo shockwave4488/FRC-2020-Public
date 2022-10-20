@@ -6,7 +6,6 @@ import org.usfirst.frc.team4488.lib.DoubleBindingException;
 import org.usfirst.frc.team4488.lib.flowcontrol.EdgeTrigger;
 import org.usfirst.frc.team4488.lib.operator.Controllers;
 import org.usfirst.frc.team4488.lib.operator.Controllers.XboxButtons;
-import org.usfirst.frc.team4488.robot.autonomous.actions.IntakeInAction;
 import org.usfirst.frc.team4488.robot.autonomous.actions.RunOnceAction;
 import org.usfirst.frc.team4488.robot.routines.ArcToStation;
 import org.usfirst.frc.team4488.robot.routines.Bindable;
@@ -58,7 +57,6 @@ public class Bindings {
   public static void addCompBindings() {
     // Only use one controller
     bindRoutine(new IntakeRoutine(), XboxButtons.RightTriggerPrim, true, true);
-    bindRunOnce(new IntakeInAction(), XboxButtons.LeftTriggerPrim);
     bindRoutine(new PurgeCells(), XboxButtons.YPrim, true, false);
     bindRoutine(
         new SimpleShoot(SmartDashboard.getNumber("Shooter RPM", 2000)), XboxButtons.XPrim, true, true);
