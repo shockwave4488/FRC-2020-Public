@@ -13,6 +13,13 @@ public class BindedRoutine extends Routine {
 
   private boolean running;
 
+  /**
+   * 
+   * @param routine
+   * @param shouldHold If true, the routine will be ended immediently when releasing the button - otherwise it will wait for the routine to finish
+   * @param bind
+   * @param interruptable
+   */
   public BindedRoutine(Routine routine, boolean shouldHold, Bindable bind, boolean interruptable) {
     this.routine = routine;
     this.bind = bind;
@@ -52,6 +59,14 @@ public class BindedRoutine extends Routine {
   }
 
   public boolean wantsRun() {
+    // Running, hold -> bind
+    // Running, !hold -> true
+    // !Running, hold -> bind
+    // !Running, !hold -> bind
+    // If this doesn't have to be held, and this is already running, continue running
+    // Otherwise, check the binding
+    // "hold" = holding the button
+    // "hold" doesn't mean continue running the routine
     return (!running || (running && shouldHold)) ? bind.get() : true;
   }
 

@@ -10,7 +10,6 @@ import org.usfirst.frc.team4488.robot.systems.ControlPanelSpinner;
 import org.usfirst.frc.team4488.robot.systems.Indexer;
 import org.usfirst.frc.team4488.robot.systems.Intake;
 import org.usfirst.frc.team4488.robot.systems.LEDController;
-import org.usfirst.frc.team4488.robot.systems.LimelightManager;
 import org.usfirst.frc.team4488.robot.systems.Shooter;
 import org.usfirst.frc.team4488.robot.systems.SmartPCM;
 import org.usfirst.frc.team4488.robot.systems.Subsystem;
@@ -179,7 +178,7 @@ public class RobotMap {
         addSystem(Indexer.getInstance());
         addSystem(Climber.getInstance());
         addSystem(LEDController.getInstance());
-        addSystem(LimelightManager.getInstance());
+        // addSystem(LimelightManager.getInstance());
         addSystem(SmartPCM.getInstance());
         addSystem(ControlPanelSpinner.getInstance());
         SmartDashboard.putString(roboNameKey, "Practice/Competition");

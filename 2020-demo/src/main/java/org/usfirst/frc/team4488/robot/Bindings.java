@@ -1,20 +1,22 @@
 package org.usfirst.frc.team4488.robot;
 
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import java.util.ArrayList;
+
 import org.usfirst.frc.team4488.lib.DoubleBindingException;
 import org.usfirst.frc.team4488.lib.flowcontrol.EdgeTrigger;
 import org.usfirst.frc.team4488.lib.operator.Controllers;
 import org.usfirst.frc.team4488.lib.operator.Controllers.XboxButtons;
 import org.usfirst.frc.team4488.robot.autonomous.actions.IntakeInAction;
 import org.usfirst.frc.team4488.robot.autonomous.actions.RunOnceAction;
-import org.usfirst.frc.team4488.robot.autonomous.actions.SpinShooterAction;
 import org.usfirst.frc.team4488.robot.routines.ArcToStation;
 import org.usfirst.frc.team4488.robot.routines.Bindable;
 import org.usfirst.frc.team4488.robot.routines.BindedRoutine;
 import org.usfirst.frc.team4488.robot.routines.IntakeRoutine;
 import org.usfirst.frc.team4488.robot.routines.PurgeCells;
 import org.usfirst.frc.team4488.robot.routines.Routine;
+import org.usfirst.frc.team4488.robot.routines.SimpleShoot;
+
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Bindings {
 
@@ -58,9 +60,8 @@ public class Bindings {
     bindRoutine(new IntakeRoutine(), XboxButtons.RightTriggerPrim, true, true);
     bindRunOnce(new IntakeInAction(), XboxButtons.LeftTriggerPrim);
     bindRoutine(new PurgeCells(), XboxButtons.YPrim, true, false);
-    bindRunOnce(
-        new SpinShooterAction(SmartDashboard.getNumber("Shooter RPM", 2000)), XboxButtons.XPrim);
-    bindRunOnce(new SpinShooterAction(0), XboxButtons.APrim);
+    bindRoutine(
+        new SimpleShoot(SmartDashboard.getNumber("Shooter RPM", 2000)), XboxButtons.XPrim, true, true);
   }
 
   public static void bindRunOnce(RunOnceAction routine, Bindable bind) {
