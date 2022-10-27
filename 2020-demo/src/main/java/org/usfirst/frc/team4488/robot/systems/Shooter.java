@@ -60,6 +60,7 @@ public class Shooter implements Subsystem {
           off();
           master.set(ControlMode.Velocity, 0);
           SmartDashboard.putBoolean("crawl?", true);
+          SmartDashboard.putNumber("Simple shoot RPM", 2000);
         }
 
         public void onLoop(double timestamp) {

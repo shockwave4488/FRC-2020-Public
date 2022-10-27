@@ -8,22 +8,22 @@ public class BindedRoutine extends Routine {
 
   private final Routine routine;
   private final Bindable bind;
-  private final boolean interruptable;
+  private final boolean interruptible;
   private final boolean shouldHold;
 
   private boolean running;
 
   /**
-   * 
    * @param routine
-   * @param shouldHold If true, the routine will be ended immediently when releasing the button - otherwise it will wait for the routine to finish
+   * @param shouldHold If true, the routine will be ended immediently when releasing the button -
+   *     otherwise it will wait for the routine to finish
    * @param bind
-   * @param interruptable
+   * @param interruptible
    */
-  public BindedRoutine(Routine routine, boolean shouldHold, Bindable bind, boolean interruptable) {
+  public BindedRoutine(Routine routine, boolean shouldHold, Bindable bind, boolean interruptible) {
     this.routine = routine;
     this.bind = bind;
-    this.interruptable = interruptable;
+    this.interruptible = interruptible;
     this.shouldHold = shouldHold;
 
     for (Subsystem system : routine.getRequiredSystems()) {
@@ -70,8 +70,8 @@ public class BindedRoutine extends Routine {
     return (!running || (running && shouldHold)) ? bind.get() : true;
   }
 
-  public boolean isInterruptable() {
-    return interruptable;
+  public boolean isInterruptible() {
+    return interruptible;
   }
 
   public boolean isAuto() {

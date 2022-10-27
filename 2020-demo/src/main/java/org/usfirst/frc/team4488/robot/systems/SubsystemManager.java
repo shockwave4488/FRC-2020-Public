@@ -163,7 +163,7 @@ public class SubsystemManager {
 
     HashSet<BindedRoutine> conflictingRoutines = getConflictingRoutines(routine);
     for (BindedRoutine conflictingRoutine : conflictingRoutines) {
-      if (!conflictingRoutine.isInterruptable()) {
+      if (!conflictingRoutine.isInterruptible()) {
         return;
       }
     }

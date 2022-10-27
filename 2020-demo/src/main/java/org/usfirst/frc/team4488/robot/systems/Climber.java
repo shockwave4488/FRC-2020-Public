@@ -14,12 +14,12 @@ import org.usfirst.frc.team4488.robot.RobotMap;
 
 public class Climber implements Subsystem {
 
-  //private static Climber instance = null;
+  // private static Climber instance = null;
 
   public static synchronized Climber getInstance() {
     throw new RuntimeException("Climber accessed");
-    //if (instance == null) instance = new Climber();
-    //return instance;
+    // if (instance == null) instance = new Climber();
+    // return instance;
   }
 
   public static enum HookPositions {

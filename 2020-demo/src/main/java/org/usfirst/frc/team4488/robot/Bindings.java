@@ -1,7 +1,7 @@
 package org.usfirst.frc.team4488.robot;
 
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import java.util.ArrayList;
-
 import org.usfirst.frc.team4488.lib.DoubleBindingException;
 import org.usfirst.frc.team4488.lib.flowcontrol.EdgeTrigger;
 import org.usfirst.frc.team4488.lib.operator.Controllers;
@@ -11,11 +11,8 @@ import org.usfirst.frc.team4488.robot.routines.ArcToStation;
 import org.usfirst.frc.team4488.robot.routines.Bindable;
 import org.usfirst.frc.team4488.robot.routines.BindedRoutine;
 import org.usfirst.frc.team4488.robot.routines.IntakeRoutine;
-import org.usfirst.frc.team4488.robot.routines.PurgeCells;
 import org.usfirst.frc.team4488.robot.routines.Routine;
 import org.usfirst.frc.team4488.robot.routines.SimpleShoot;
-
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Bindings {
 
@@ -57,9 +54,11 @@ public class Bindings {
   public static void addCompBindings() {
     // Only use one controller
     bindRoutine(new IntakeRoutine(), XboxButtons.RightTriggerPrim, true, true);
-    bindRoutine(new PurgeCells(), XboxButtons.YPrim, true, false);
     bindRoutine(
-        new SimpleShoot(SmartDashboard.getNumber("Shooter RPM", 2000)), XboxButtons.XPrim, true, true);
+        new SimpleShoot(() -> SmartDashboard.getNumber("Simple shoot RPM", 2000)),
+        XboxButtons.XPrim,
+        true,
+        true);
   }
 
   public static void bindRunOnce(RunOnceAction routine, Bindable bind) {
@@ -70,8 +69,8 @@ public class Bindings {
   }
 
   public static void bindRoutine(
-      Routine routine, Bindable bind, boolean shouldHold, boolean interruptable) {
-    BindedRoutine binded = new BindedRoutine(routine, shouldHold, bind, interruptable);
+      Routine routine, Bindable bind, boolean shouldHold, boolean interruptible) {
+    BindedRoutine binded = new BindedRoutine(routine, shouldHold, bind, interruptible);
     RobotMap.bindedRoutines.add(binded);
   }
 
@@ -86,13 +85,13 @@ public class Bindings {
   }
 
   public static void bindRoutine(
-      Routine routine, XboxButtons bind, boolean shouldHold, boolean interruptable) {
+      Routine routine, XboxButtons bind, boolean shouldHold, boolean interruptible) {
     for (int i = 0; i < xboxButtons.size(); i++) {
       if (bind == xboxButtons.get(i)) {
         throw new DoubleBindingException(bind);
       }
     }
     xboxButtons.add(bind);
-    bindRoutine(routine, bind.bind, shouldHold, interruptable);
+    bindRoutine(routine, bind.bind, shouldHold, interruptible);
   }
 }

@@ -11,12 +11,12 @@ import org.usfirst.frc.team4488.robot.RobotName;
 
 public class LimelightManager implements Subsystem {
 
-  //private static LimelightManager instance = null;
+  // private static LimelightManager instance = null;
 
   public static synchronized LimelightManager getInstance() {
     throw new RuntimeException("Limelight accessed");
-    //if (instance == null) instance = new LimelightManager();
-    //return instance;
+    // if (instance == null) instance = new LimelightManager();
+    // return instance;
   }
 
   private Limelight frontLimelight;
