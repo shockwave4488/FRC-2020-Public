@@ -37,7 +37,7 @@ public class Robot extends TimedRobot {
     subsystemManager.addRoutines(RobotMap.bindedRoutines);
     looper.register(RobotStateLoop.createInstance(drive.getStateEstimator()));
 
-    AutoModeSelector.init();
+//    AutoModeSelector.init();
 
     subsystemManager.registerEnabledLoops(looper);
     subsystemManager.zeroSensors();

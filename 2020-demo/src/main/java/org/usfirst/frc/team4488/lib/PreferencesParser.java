@@ -102,7 +102,7 @@ public class PreferencesParser {
   }
 
   private boolean keyExists(String key) {
-    if (json.get(key) == null) {
+    if (json == null || json.get(key) == null) {
       return false;
     }
 

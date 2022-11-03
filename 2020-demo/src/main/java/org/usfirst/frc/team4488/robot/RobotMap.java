@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.usfirst.frc.team4488.lib.PreferenceDoesNotExistException;
 import org.usfirst.frc.team4488.lib.PreferencesParser;
 import org.usfirst.frc.team4488.robot.routines.BindedRoutine;
-import org.usfirst.frc.team4488.robot.systems.Climber;
 import org.usfirst.frc.team4488.robot.systems.ControlPanelSpinner;
 import org.usfirst.frc.team4488.robot.systems.Indexer;
 import org.usfirst.frc.team4488.robot.systems.Intake;
@@ -176,7 +175,7 @@ public class RobotMap {
         addSystem(Intake.getInstance());
         addSystem(Shooter.getInstance());
         addSystem(Indexer.getInstance());
-        addSystem(Climber.getInstance());
+        // addSystem(Climber.getInstance());
         addSystem(LEDController.getInstance());
         // addSystem(LimelightManager.getInstance());
         addSystem(SmartPCM.getInstance());
